@@ -35,10 +35,64 @@
 
     <div id='main'>
       <div>
-        <label class='alert type1'>使用 Facebook 登入成功!</label>
+        <!-- <label class='alert type1'>使用 Facebook 登入成功!</label>
         <label class='alert type2'>使用 Facebook 登入成功!</label>
         <label class='alert type3'>使用 Facebook 登入成功!</label>
         <label class='alert type4'>使用 Facebook 登入成功!</label>
+ -->
+        <h1>文章列表</h1>
+
+        <div class='search'>
+          <input type='checkbox' id='search_conditions' class='hckb' />
+          
+          <div class='left'>
+            <label class='icon-search' for='search_conditions'></label>
+            <span><b>搜尋條件：</b>標題「<b>你好嗎</b>」,作者「<b>吳政賢</b>」。</span>
+          </div>
+          
+          <div class='right'>
+            <a href=''>新增文章</a>
+          </div>
+
+          <form class='conditions'>
+            <input type='text' placeholder='依照名稱搜尋'>
+            <input type='number' placeholder='依照名稱搜尋'>
+            <input type='date' placeholder='依照名稱搜尋'>
+            
+            <select>
+              <option>依照公司搜尋</option>
+            </select>
+
+            <div class='checkboxs' title='請選擇項目'>
+
+              <label class='checkbox'>
+                <input type='checkbox' >
+                <span></span>
+                選項 1
+              </label>
+
+              <label class='checkbox'>
+                <input type='checkbox' >
+                <span></span>
+                選項 1
+              </label>
+
+              <label class='checkbox'>
+                <input type='checkbox' >
+                <span></span>
+                選項 1
+              </label>
+              
+
+            </div>
+
+            <div class='btns'>
+              <button type='submit'>搜尋</button>
+              <label for='search_conditions'>取消</label>
+            </div>
+
+          </form>
+        </div>
 
         <div class='panel'>
           
@@ -47,7 +101,7 @@
               <tr>
                 <th width='70'>#</th>
                 <th width='50'>封面</th>
-                <th width='100'>標題 3</th>
+                <th width='100'>啟用</th>
                 <th >標題 4</th>
                 <th width='100'>編輯</th>
               </tr>
@@ -58,7 +112,12 @@
                 <td>
                   <div class='img _ic'><img src='https://graph.facebook.com/1222557214424285/picture?width=400&height=400' /></div>
                 </td>
-                <td>3</td>
+                <td>
+                  <label class='switch'>
+                    <input type='checkbox' />
+                    <span></span>
+                  </label>
+                </td>
                 <td>44444444444444444</td>
                 <td>
                   <a href="" class='icon-pencil2'></a>
@@ -72,7 +131,12 @@
                 <td>
                   <div class='img _ic'><img src='https://graph.facebook.com/1222557214424285/picture?width=400&height=400' /></div>
                 </td>
-                <td>3</td>
+                <td>
+                  <label class='switch'>
+                    <input type='checkbox' />
+                    <span></span>
+                  </label>
+                </td>
                 <td>44444444444444444</td>
                 <td>
                   <a href="" class='icon-pencil2'></a>
@@ -81,19 +145,6 @@
                 </td>
               </tr>
               
-              <tr>
-                <td>1234</td>
-                <td>
-                  <div class='img _ic'><img src='https://graph.facebook.com/1222557214424285/picture?width=400&height=400' /></div>
-                </td>
-                <td>3</td>
-                <td>44444444444444444</td>
-                <td>
-                  <a href="" class='icon-pencil2'></a>
-                  /
-                  <a href="" class='icon-bin'></a>
-                </td>
-              </tr>
               
               
             </tbody>
@@ -146,7 +197,7 @@
       </div>
       
       <div class='group'>
-        <span class='icon-home'>anme</span>
+        <span class='icon-home'>管理系統</span>
         <div>
           <a class='icon-home' href=''>文章編輯</a>
           <a class='icon-home' href=''>asdadad</a>
@@ -156,7 +207,7 @@
       </div>
       
       <div class='group'>
-        <span class='icon-home'>anme</span>
+        <span class='icon-home'>帳務系統</span>
         <div>
           <a class='icon-home' href=''>文章編輯</a>
           <a class='icon-home' href=''>asdadad</a>
