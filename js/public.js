@@ -16,8 +16,8 @@ $(function () {
   $('.table-list').each (function () { if (!$(this).find ('tbody > tr').length) $(this).find ('tbody').append ($('<tr />').append ($('<td />').attr ('colspan', $(this).find ('thead th').length).text ('沒有任何資料。'))); });
 
   $('textarea.cke').ckeditor ({
-    filebrowserUploadUrl: '',
-    filebrowserImageBrowseUrl: '',
+    filebrowserUploadUrl: '1',
+    filebrowserImageBrowseUrl: '1',
     skin: 'oa',
     height: 300,
     resize_enabled: false,
@@ -25,4 +25,6 @@ $(function () {
     toolbarGroups: [{ name: '1', groups: [ 'mode', 'tools', 'links', 'basicstyles', 'colors', 'insert', 'list' ] }],
     removeButtons: 'Strike,Underline,Italic,Table,HorizontalRule,Smiley,Subscript,Superscript,Forms,Save,NewPage,Print,Preview,Templates,Cut,Copy,Paste,PasteText,PasteFromWord,Find,Replace,SelectAll,Scayt,Checkbox,Radio,TextField,Textarea,Select,Button,ImageButton,HiddenField,Form,RemoveFormat,CreateDiv,BidiLtr,BidiRtl,Language,Anchor,Flash,PageBreak,Iframe,About,Styles'
   });
+
+
 });

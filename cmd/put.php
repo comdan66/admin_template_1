@@ -51,7 +51,7 @@ if (!UPLOAD) {
 
 // 設定好要上傳的資料夾位置 與 檔案類型
 Step::setUploadDirs (array (
-    'js' => array ('js'),
+    'js' => array ('js', 'css', 'eot', 'svg', 'ttf', 'woff', 'png', 'jpg', 'jpeg', 'gif', 'svg'),
     'css' => array ('css'),
     'font' => array ('eot', 'svg', 'ttf', 'woff'),
     'img' => array ('png', 'jpg', 'jpeg', 'gif', 'svg'),
