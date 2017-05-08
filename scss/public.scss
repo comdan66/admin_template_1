@@ -619,7 +619,7 @@ html {
   width: 100%;
   text-align: left;
   font-size: 14px;
-  padding: 16px;
+  padding: 12px 16px;
   margin-top: 16px;
 
   @include range-width(0, 450px) {
@@ -630,22 +630,27 @@ html {
   border-width: 1px;
   border-style: solid;;
   border-left-width: 5px;
+  @include border-radius(2px);
 
   &.type1 {
-    background-color: rgba(230, 245, 253, 1.00);
+    color: rgba(5, 83, 118, 1.00);
     border-color: rgba(0, 188, 212, 1.00);
+    background-color: rgba(230, 245, 253, 1.00);
   }
   &.type2 {
-    background-color: rgba(240, 251, 227, 1.00);
+    color: rgba(8, 93, 85, 1.00);
     border-color: rgba(139, 195, 74, 1.00);
+    background-color: rgba(240, 251, 227, 1.00);
   }
   &.type3 {
-    background-color: rgba(251, 233, 230, 1.00);
+    color: rgba(125, 7, 47, 1.00);
     border-color: rgba(244, 67, 54, 1.00);
+    background-color: rgba(251, 233, 230, 1.00);
   }
   &.type4 {
-    background-color: rgba(255, 250, 237, 1.00);
+    color: rgba(120, 78, 17, 1.00);
     border-color: rgba(255, 202, 40, 1.00);
+    background-color: rgba(255, 250, 237, 1.00);
   }
 }
 
