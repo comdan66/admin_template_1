@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="tw">
+  <head>
+    <meta http-equiv="Content-Language" content="zh-tw" />
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+
+    <title></title>
+
+    <link href="css/icon.css" rel="stylesheet" type="text/css" />
+    <link href="css/public.css" rel="stylesheet" type="text/css" />
+
+    <script src="js/jquery_v1.10.2/jquery-1.10.2.min.js" language="javascript" type="text/javascript" ></script>
+    <script src="js/public.js" language="javascript" type="text/javascript" ></script>
+
+  </head>
+  <body lang="zh-tw">
+    <input type='checkbox' class='hckb' id='menu_ckb' />
+    <input type='checkbox' class='hckb' id='user_ckb' />
+    
+    <header id='header'>
+      <div class='logo'>
+        <span class='icon-amused-face-closed-eyes'></span>
+        <span>後台 Demo</span>
+      </div>
+      <div class='midle'>
+        <label class='icon-menu' for='menu_ckb'></label>
+      </div>
+      <div class='avatar' news>
+        <label for='user_ckb' class='_ic'>
+          <img src='img/user.png' />
+        </label>
+      </div>
+    </header>
+
+    <div id='main'>
+      <div>
+        <!-- <label class='alert type1'>使用 Facebook 登入成功!</label>
+        <label class='alert type2'>使用 Facebook 登入成功!</label>
+        <label class='alert type3'>使用 Facebook 登入成功!</label>
+        <label class='alert type4'>使用 Facebook 登入成功!</label>
+ -->
+        <h1>文章列表</h1>
+
+        <div class='search'>
+          <input type='checkbox' id='search_conditions' class='hckb' />
+          
+          <div class='left'>
+            <label class='icon-search' for='search_conditions'></label>
+            <span><b>搜尋條件：</b>標題「<b>你好嗎</b>」,作者「<b>吳政賢</b>」。</span>
+          </div>
+          
+          <div class='right'>
+            <a href=''>新增文章</a>
+          </div>
+
+          <form class='conditions'>
+            <input type='text' placeholder='依照名稱搜尋'>
+            <input type='number' placeholder='依照名稱搜尋'>
+            <input type='date' placeholder='依照名稱搜尋'>
+            
+            <select>
+              <option>依照公司搜尋</option>
+            </select>
+
+            <div class='checkboxs' title='請選擇項目'>
+
+              <label class='checkbox'>
+                <input type='checkbox' >
+                <span></span>
+                選項 1
+              </label>
+
+              <label class='checkbox'>
+                <input type='checkbox' >
+                <span></span>
+                選項 1
+              </label>
+
+              <label class='checkbox'>
+                <input type='checkbox' >
+                <span></span>
+                選項 1
+              </label>
+              
+
+            </div>
+
+            <div class='btns'>
+              <button type='submit'>搜尋</button>
+              <label for='search_conditions'>取消</label>
+            </div>
+
+          </form>
+        </div>
+
+        <div class='panel'>
+          
+          <table class='table-list'>
+            <thead>
+              <tr>
+                <th width='70'>#</th>
+                <th width='50'>封面</th>
+                <th width='100'>啟用</th>
+                <th >標題 4</th>
+                <th width='100'>編輯</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>1234</td>
+                <td>
+                  <div class='img _ic'><img src='img/user.png' /></div>
+                </td>
+                <td>
+                  <label class='switch'>
+                    <input type='checkbox' />
+                    <span></span>
+                  </label>
+                </td>
+                <td>44444444444444444</td>
+                <td>
+                  <a href="" class='icon-pencil2'></a>
+                  /
+                  <a href="" class='icon-bin'></a>
+                </td>
+              </tr>
+              
+              <tr>
+                <td>1234</td>
+                <td>
+                  <div class='img _ic'><img src='img/user.png' /></div>
+                </td>
+                <td>
+                  <label class='switch'>
+                    <input type='checkbox' />
+                    <span></span>
+                  </label>
+                </td>
+                <td>44444444444444444</td>
+                <td>
+                  <a href="" class='icon-pencil2'></a>
+                  /
+                  <a href="" class='icon-bin'></a>
+                </td>
+              </tr>
+              
+              
+              
+            </tbody>
+          </table>
+
+        </div>
+        
+        <div class="pagination">
+          <ul>
+            <li class='f icon-first_page'>
+              <a href=""></a>
+            </li>
+            <li class='p icon-keyboard_arrow_left'>
+              <a href=""></a>
+            </li>
+            <li>
+              <a href="">1</a>
+            </li>
+            <li class="active">
+              <a href="">2</a>
+            </li>
+            <li>
+              <a href="">3</a>
+            </li>
+            <li class="n icon-keyboard_arrow_right">
+              <a href=""></a>
+            </li>
+            <li class="l icon-last_page">
+              <a href=""></a>
+            </li>
+          </ul>
+        </div>
+
+
+      </div>
+    </div>
+
+
+    <div id='menu'>
+      <header>
+        <span class='icon-amused-face-closed-eyes'></span>
+        <span>後台 Demo</span>
+      </header>
+
+      <div class='group'>
+        <span class='icon-home'>後台</span>
+        <div>
+          <a class='icon-home' href='index.html'>首頁</a>
+        </div>
+      </div>
+      <div class='group'>
+        <span class='icon-home'>各項 UI</span>
+        <div>
+          <a class='icon-home' href='alert.html'>提示</a>
+          <a class='icon-home show' href='list.html'>列表</a>
+          <a class='icon-home' href='form.html'>表單</a>
+        </div>
+      </div>
+
+      <footer>© 2016 - 2017 WWW.IOA.TW</footer>
+    </div><label class='icon-cross' for='menu_ckb'></label>
+
+    <div id='user'>
+      <div>
+        <span>Hi, <b>吳政賢</b> 您好。</span>
+        <span>目前登入次數：<b>1,231</b>次</span>
+        <span>上次登入：1 個月前</span>
+        <a href='' class='icon-notifications_active' data-count='10,000'>您有未讀訊息</a>
+        <a href='login.html' class='icon-power'>登出</a>
+      </div>
+    </div><label for='user_ckb'></label>
+
+  </body>
+</html>
