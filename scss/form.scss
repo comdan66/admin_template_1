@@ -53,7 +53,7 @@ form.form-type1 {
           text-align: center;
 
           @include range-width(0, 450px) {
-            top: 2px;
+            top: 1.5px;
             left: -23px;
             border: 1px solid rgba(216, 216, 216, 1.00);
             line-height: 20px - 2px;
