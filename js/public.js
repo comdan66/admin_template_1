@@ -30,4 +30,23 @@ $(function () {
   });
 
   $('.drop_img').OAdropUploadImg ();
+
+  function mutiImg ($obj) {
+    if ($obj.length <= 0) return;
+    $obj.on ('click', '.drop_img > a', function () {
+      var $parent = $(this).parent ();
+      $parent.remove ();
+    });
+
+    $obj.on ('change', '.drop_img > input[type="file"]', function () {
+      if (!$(this).val ().length) return;
+      var $parent = $(this).parent (),
+          $n = $parent.clone ().removeAttr ('data-loading').addClass ('no');
+
+      $n.find ('img').attr ('src', '');
+      $n.find ('input').val ('');
+      $n.OAdropUploadImg ().insertAfter ($parent);
+    });
+  }
+  mutiImg ($('.drop_imgs'));
 });

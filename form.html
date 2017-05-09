@@ -13,7 +13,7 @@
 
     <script src="js/jquery_v1.10.2/jquery-1.10.2.min.js" language="javascript" type="text/javascript" ></script>
     <script src="js/public.js" language="javascript" type="text/javascript" ></script>
-    <script src="js/OAdropUploadImg.min.js" language="javascript" type="text/javascript" ></script>
+    <script src="js/OAdropUploadImg.js" language="javascript" type="text/javascript" ></script>
     
     <script src="js/ckeditor_d2015_05_18/ckeditor.js" language="javascript" type="text/javascript" ></script>
     <script src="js/ckeditor_d2015_05_18/config.js" language="javascript" type="text/javascript" ></script>
@@ -83,10 +83,31 @@
 
             <div class='row'>
               <b class='need' data-title='預覽僅示意，未按比例。'>文章封面</b>
-              <div class='drop_img no'>
+              <div class='drop_img'>
                 <img src='' />
                 <input type='file' name='cover' />
               </div>
+            </div>
+
+            <div class='row'>
+              <b>照片</b>
+              <div class='drop_imgs'>
+                
+                <div class='drop_img'>
+                  <img src='img/user.png' />
+                  <input type='hidden' name='oldimg[]' value='0' />
+                  <input type='file' name='images[]' />
+                  <a class='icon-bin'></a>
+                </div>
+
+                <div class='drop_img'>
+                  <img src='' />
+                  <input type='file' name='images[]' />
+                  <a class='icon-bin'></a>
+                </div>
+
+              </div>
+
             </div>
 
             <div class='row'>

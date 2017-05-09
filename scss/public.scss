@@ -848,6 +848,25 @@ table.table-list {
       @include table-list-type2;
     }
   }
+  @include range-width(750px, 950px) {
+    ~ * form.form-type1 {
+      .row {
+        .drop_imgs {
+          .drop_img {
+            width: calc(100% / 3 - 16px * 2 / 3);
+            height: 145px;
+            margin-left: 16px;
+            &:nth-child(3n + 1) {
+              margin-left: 0;
+            }
+            &:nth-child(n + 4) {
+              margin-top: 16px;
+            }
+          }
+        }
+      }
+    }
+  }
 }
 
 @include keyframes(main-show){

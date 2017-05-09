@@ -12,9 +12,9 @@
         clean ($img);
         $(this).attr ('data-loading', '讀取中..').removeClass ('no');
       },
-      clean = function ($img, noImg) {
+      clean = function ($img) {
         $(this).removeAttr ('data-loading').addClass ('no');
-        if ($img && noImg !== true) $img.attr ('src', '');
+        $img.attr ('src', '');
       },
       rotate = function (e, callback, a) {
         var img = new Image ();
@@ -89,38 +89,51 @@
 
         reader.onload = function (e) {
           rotateAngle.bind (e, file, function (ca) {
-            $img.attr ('src', ca.toDataURL ()).load (clean.bind ($obj, $img, true));
+            $img.attr ('src', ca.toDataURL ()).load (function () {
+             $obj.removeAttr ('data-loading');
+            });
           }) ();
         };
 
         reader.readAsDataURL (file);
       },
       init = function (opt) {
-        
         var $obj = $(this),
             $img = $obj.find ('img'),
             $input = $obj.find ('input[type="file"]').change (function () {
-
               loading.bind ($obj, $img) ();
 
               if (!($(this).val ().length && $(this).get (0).files && $(this).get (0).files[0]))
-                clean.bind ($obj, $img, false) ();
+                clean.bind ($obj, $img) ();
               else
                 loadPic.bind ($obj, $img, $(this).get (0).files[0]) ();
 
               $(this).css ({'top' : 0, 'left': 0});
             });
+        
+        if (!$img.attr ('src').length)
+          $obj.addClass ('no');
+
 
         $obj.bind ('dragover', function (e) {
           e.stopPropagation ();
           e.preventDefault ();
-          $(this).addClass ('no');
-          $input.offset ({ top: e.originalEvent.pageY - 15, left: e.originalEvent.pageX - 100 });
+          $(this).addClass ('ho');
+          $input.offset ({ top: e.originalEvent.pageY - 15, left: e.originalEvent.pageX - 10 });
         })
-        .bind ('dragleave', function (e) { e.stopPropagation (); e.preventDefault (); });
+        .bind ('dragleave', function (e) {
+          e.stopPropagation ();
+          e.preventDefault ();
+          $(this).removeClass ('ho');
+        })
+        .bind ('drop', function (e) {
+          $(this).removeClass ('ho');
+        });
       };
 
-      $(this).each (init.bind ($(this), $.extend (true, d4Opt, opt)));
+      $(this).each (function () {
+        init.bind ($(this)) ($.extend (true, d4Opt, opt));
+      });
       return $(this);
     }
   });
