@@ -13,6 +13,7 @@
 
     <script src="js/jquery_v1.10.2/jquery-1.10.2.min.js" language="javascript" type="text/javascript" ></script>
     <script src="js/public.js" language="javascript" type="text/javascript" ></script>
+    <script src="js/OAdropUploadImg.min.js" language="javascript" type="text/javascript" ></script>
     
     <script src="js/ckeditor_d2015_05_18/ckeditor.js" language="javascript" type="text/javascript" ></script>
     <script src="js/ckeditor_d2015_05_18/config.js" language="javascript" type="text/javascript" ></script>
@@ -47,7 +48,7 @@
           <form class='form-type1'>
 
             <div class='row min'>
-              <b>是否公開</b>
+              <b class='need'>是否公開</b>
               <label class='switch'>
                 <input type='checkbox' />
                 <span></span>
@@ -55,7 +56,7 @@
             </div>
 
             <div class='row'>
-              <b>文章作者</b>
+              <b class='need'>文章作者</b>
               <select>
                 <option>選項 1</option>
                 <option>選項 2</option>
@@ -64,12 +65,37 @@
             </div>
 
             <div class='row'>
-              <b>文章標題</b>
+              <b class='need'>文章分類</b>
+              
+              <label class='checkbox'>
+                <input type='checkbox' >
+                <span></span>
+                選項 1
+              </label>
+              
+              <label class='checkbox'>
+                <input type='checkbox' >
+                <span></span>
+                選項 1
+              </label>
+
+            </div>
+
+            <div class='row'>
+              <b class='need' data-title='預覽僅示意，未按比例。'>文章封面</b>
+              <div class='drop_img no'>
+                <img src='' />
+                <input type='file' name='cover' />
+              </div>
+            </div>
+
+            <div class='row'>
+              <b class='need'>文章標題</b>
               <input type='text' name='title' placeholder='請輸入文章標題..' />
             </div>
             
             <div class='row'>
-              <b>文章內容</b>
+              <b class='need' data-title='請補足10個字'>文章內容</b>
               <textarea name='content' class='cke' placeholder='請輸入文章內容..'></textarea>
             </div>
 
@@ -77,6 +103,7 @@
               <b>文章備註</b>
               <textarea name='memo' placeholder='請輸入文章備註..'></textarea>
             </div>
+
 
 
             <div class='row'>
