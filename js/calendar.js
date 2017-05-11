@@ -14,12 +14,6 @@ $(function () {
   function animals (y) { return _animals[(y - 4) % 12]; }
   function ganZhi (n) { n = n - 1900 + 36; return _gan[n % 10] + _zhi[n % 12]; }
 
-  // var wFtv = {
-  //   '0520': '母親節',
-  //   '0716': '國際合作節',
-  //   '0730': '被奴役國家週',
-  //   '1144': '感恩節'};
-
   function monthDayCount (y, m) {
     m = parseInt (m, 10);
     y = parseInt (y, 10);
@@ -59,7 +53,7 @@ $(function () {
         };
         
         var lun = window.LunarCalendar.solarToLunar (r.y, r.m, r.d);
-        console.error ();
+        
         
         return {
           y: r.y,
@@ -121,7 +115,6 @@ $(function () {
                     .attr ('data-gz', ganZhi (time.getFullYear ()))
                     .attr ('data-a', animals (time.getFullYear ()));
 
-// console.error (2017-1911, a (2017));
 
     var $months = resetMonth ($that.find ('.months'), $now.data ('y'), $now.data ('m'));
                 
@@ -150,7 +143,5 @@ $(function () {
                 .attr ('data-a', animals (o.y));
          });
   });
-
-// console.error (window.LunarCalendar.solarToLunar (2017,4,24));
 
 });
