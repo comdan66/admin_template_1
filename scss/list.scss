@@ -1,0 +1,250 @@
+/**
+ * @author      OA Wu <comdan66@gmail.com>
+ * @copyright   Copyright (c) 2016 OA Wu Design
+ */
+
+@import "_oa";
+
+
+@mixin mini-table-list{
+  position: relative;
+  display: inline-block;
+  @include clearfix();
+  border: 1px solid rgba(221, 221, 221, 1.00);
+  
+  > thead {
+    // position: absolute;
+    // left: 0;
+    // top: 0;
+    float: left;
+
+    display: inline-block;
+    width: 100px;
+
+    > tr {
+      display: inline-block;
+      width: 100%;
+
+      > th {
+        display: inline-block;
+        width: 100%;
+        height: 55px;
+        line-height: 55px;
+        padding: 0 5px;
+        text-align: right !important;
+        border: 0;
+        @include overflow-docx3();
+        border-right: 2px solid rgba(221, 221, 221, 1.00);
+        border-bottom: 1px solid rgba(221, 221, 221, 1.00);
+        background-color: rgba(249, 249, 249, 1.00);
+
+        &:last-child {
+            border-bottom: 0;
+        }
+        > div {
+          display: none;
+        }
+      }
+    }
+  }
+  > tbody {
+    float: left;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+
+    width: calc(100% - 100px);
+    overflow-x: auto;
+    white-space: nowrap;
+    
+    > tr {
+      display: inline-block;
+
+      > td {
+        display: block;
+        height: 55px;
+        line-height: 55px;
+
+        padding: 0 5px;
+        margin: 0;
+        text-align: left !important;
+        border: 0;
+        background-color: white;
+        border-right: 1px solid rgba(221, 221, 221, 1.00);
+        border-bottom: 1px solid rgba(221, 221, 221, 1.00);
+        
+        &:last-child {
+          border-bottom: 0;
+        }
+        @for $i from 1 through 13 {
+          &[colspan="#{$i}"] {
+            height: 55px * $i;
+            line-height: 55px * $i;
+          }
+        }
+        a {
+        }
+        label.switch {
+          margin-top: 15px;
+        }
+        .img {
+          display: inline-block;
+          height: 45px;
+          width: 45px;
+          margin-top: 5px;
+          // margin-left: 5px;
+        }
+      }
+      &:last-child {
+        > td {
+          border-right: 0;
+        }
+      }
+    }
+  }
+}
+
+table.table-list {
+  display: table;
+  width: 100%;
+  margin-top: 16px;
+
+  @include range-width(0, 450px) {
+    margin-top: 8px;
+  };
+  border-spacing: 0;
+  border-collapse: collapse;
+  table-layout: fixed;
+
+  > thead {
+    > tr {
+      background-color: white;
+
+      > th {
+        border-bottom: 2px solid rgba(221, 221, 221, 1.00);
+        word-break: break-all;
+        height: 44px;
+        line-height: 44px;
+        padding: 0 5px;
+        text-align: right;
+        // border: 1px solid rgba(255, 0, 0, .3);
+
+        &:first-child {
+          text-align: center;
+        }
+        div {
+          display: inline-block;
+          // border: 1px solid rgba(255, 0, 0, .3);
+          margin-left: 4px;
+          margin-top: 6px;
+          a {
+            display: block;
+            width: 20px;
+            text-align: center;
+            height: 14px;
+            line-height: 14px;
+            cursor: pointer;
+            @include opacity(.75);
+
+            // background-color: rgba(0, 0, 255, 0.2);
+            @include border-radius(2px);
+            @include transition(background-color .3s, opacity .3s);
+            
+            &:hover {
+              line-height: 12px;
+              background-color: rgba(245, 245, 245, 1.00);
+              border: 1px solid rgba(235, 235, 235, 1.00);
+              @include opacity(1);
+              &:before {
+                font-weight: bold;
+              }
+            }
+            &.active {
+              @include opacity(1);
+              &:before {
+                font-weight: bold;
+              }
+            }
+            &:before {
+              content: "\e901";
+              font-family: "icomoon"; speak: none; font-style: normal; font-weight: normal; font-variant: normal; text-transform: none; 
+            }
+
+            + a {
+              margin-top: 2px;
+              &:before {
+                content: "\e904";
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  > tbody {
+    > tr {
+      background-color: white;
+
+      > td {
+        border-top: 1px solid rgba(221, 221, 221, 1.00);
+        word-break: break-all;
+        padding: 10px 5px;
+        text-align: right;
+
+        &:first-child {
+          text-align: center;
+        }
+
+        &:empty {
+          &:before {
+            content: '-';
+            font-weight: normal;
+            @include opacity(.5);
+          }
+        }
+
+        .img {
+          display: inline-block;
+          width: 50px;
+          height: 50px;
+          overflow: hidden;
+          @include box-shadow(0 0 1px rgba(0,0,0,0.3));
+          @include border-radius(2px);
+
+          img {
+            width: 100%;
+          }
+        }
+        &[colspan] {
+          font-size: 13px;
+          @include opacity(.65);
+        }
+      }
+      &:nth-child(odd) {
+        background-color: rgba(249, 249, 249, 1.00);
+      }
+    }
+  }
+
+  @include range-width(0, 600px) {
+    @include mini-table-list;
+  };
+
+  ~ span {
+    display: inline-block;
+    width: 100%;
+    font-size: 13px;
+    height: 23px;
+    line-height: 23px;
+    margin-top: 8px;
+    color: rgba(135, 135, 135, 1.00);
+  }
+}
+
+#menu_ckb:not(:checked) {
+  @include range-width(750px, 950px) {
+    ~ * table.table-list {
+      @include mini-table-list;
+    }
+  }
+}

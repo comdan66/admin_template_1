@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="tw">
+  <head>
+    <meta http-equiv="Content-Language" content="zh-tw" />
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+
+    <title></title>
+
+    <link href="css/icon.css" rel="stylesheet" type="text/css" />
+    <link href="css/public.css" rel="stylesheet" type="text/css" />
+    <link href="css/calendar.css" rel="stylesheet" type="text/css" />
+
+    <script src="js/jquery_v1.10.2/jquery-1.10.2.min.js" language="javascript" type="text/javascript" ></script>
+    <script src="js/public.js" language="javascript" type="text/javascript" ></script>
+    <script src="js/LunarCalendar.js" language="javascript" type="text/javascript" ></script>
+    <script src="js/calendar.js" language="javascript" type="text/javascript" ></script>
+
+  </head>
+  <body lang="zh-tw">
+    <input type='checkbox' class='hckb' id='menu_ckb' />
+    <input type='checkbox' class='hckb' id='user_ckb' />
+    
+    <header id='header'>
+      <div class='logo'>
+        <span class='icon-amused-face-closed-eyes'></span>
+        <span>後台 Demo</span>
+      </div>
+      <div class='midle'>
+        <label class='icon-menu' for='menu_ckb'></label>
+      </div>
+      <div class='avatar' news>
+        <label for='user_ckb' class='_ic'>
+          <img src='img/user.png' />
+        </label>
+      </div>
+    </header>
+
+    <div id='main'>
+      <div>
+        <h1>日曆</h1>
+        <div class='panel'>
+          
+          <div class='calendar'>
+            <div class='title'>
+              <div class='now'></div>
+              <div class='arr'><a></a><a></a><a></a></div>
+            </div>
+
+            <div class='months'>
+
+<!--               <div class='month'>
+                <div class='weeks'>
+                  <div>星期 日</div>
+                  <div>星期 一</div>
+                  <div>星期 二</div>
+                  <div>星期 三</div>
+                  <div>星期 四</div>
+                  <div>星期 五</div>
+                  <div>星期 六</div>
+                </div>
+
+                <div class='days'>
+                  <div data-day='2'><span>qw</span></div>
+                  <div data-day='3'><span>qwew</span></div>
+                  <div data-day='4'><span>qwe</span></div>
+                  <div data-day='5'><span>qwe</span></div>
+                  <div data-day='6'></div>
+                  <div data-day='8'></div>
+                  <div data-day='9'></div>
+                </div>
+                <div class='days'>
+                  <div data-day='10'></div>
+                  <div data-day='11'></div>
+                  <div data-day='12'></div>
+                  <div data-day='13'></div>
+                  <div data-day='14'></div>
+                  <div data-day='15'></div>
+                  <div data-day='16'></div>
+                </div>
+                <div class='days'>
+                  <div data-day='17'></div>
+                  <div data-day='18'></div>
+                  <div data-day='19'></div>
+                  <div data-day='20'></div>
+                  <div data-day='21'></div>
+                  <div data-day='22'></div>
+                  <div data-day='23'></div>
+                </div>
+                <div class='days'>
+                  <div data-day='24'></div>
+                  <div data-day='25'></div>
+                  <div data-day='26'></div>
+                  <div data-day='27'></div>
+                  <div data-day='28'></div>
+                  <div data-day='29'></div>
+                  <div data-day='30'></div>
+                </div>
+                <div class='days'>
+                  <div data-day='31'></div>
+                  <div data-day='1'></div>
+                  <div data-day='2'></div>
+                  <div data-day='3'></div>
+                  <div data-day='4'></div>
+                  <div data-day='5'></div>
+                  <div data-day='6'></div>
+                </div>
+              </div>
+              <div class='month'>
+                <div class='weeks'>
+                  <div>星期 日</div>
+                  <div>星期 一</div>
+                  <div>星期 二</div>
+                  <div>星期 三</div>
+                  <div>星期 四</div>
+                  <div>星期 五</div>
+                  <div>星期 六</div>
+                </div>
+                <div class='days'>
+                  <div data-day='1' data-lunar='廿八'>
+                    <span>中秋節</span>
+
+                    <div class='finish'><img src='img/user.png' /><span>asd</span></div>
+                    <div><img src='img/user.png' /><span>asd</span></div>
+                    <div><img src='img/user.png' /><span>asd</span></div>
+                    <div><img src='img/user.png' /><span>asd</span></div><div><span>asd</span></div>
+
+                  </div>
+                  <div data-day='2' data-lunar='廿八'></div>
+                  <div data-day='3' data-lunar='小滿'>
+                    <span class='holiday'>中秋節, 中秋節, 中秋節</span>
+                    <div><img src='img/user.png' /><span>asd</span></div>
+                    <div><img src='img/user.png' /><span>asd</span></div><div><span>asd</span></div></div>
+                  <div data-day='4' data-lunar='5月小'></div>
+                  <div data-day='5' data-lunar='廿八'></div>
+                  <div data-day='6' data-lunar='廿八'></div>
+                  <div data-day='7' data-lunar='廿八'></div>
+                </div>
+                <div class='days'>
+                  <div data-day='8'></div>
+                  <div data-day='9'></div>
+                  <div data-day='10'>
+                    <div><img src='img/user.png' /><span>asd</span></div>
+                    <div><img src='img/user.png' /><span>asd</span></div><div><span>asd</span></div></div>
+                  <div data-day='11'></div>
+                  <div data-day='12'></div>
+                  <div data-day='13'></div>
+                  <div data-day='14'></div>
+                </div>
+                <div class='days'>
+                  <div data-day='15'></div>
+                  <div data-day='16'></div>
+                  <div data-day='17'></div>
+                  <div data-day='18'></div>
+                  <div data-day='19'></div>
+                  <div data-day='20'></div>
+                  <div data-day='21'></div>
+                </div>
+                <div class='days'>
+                  <div data-day='22'></div>
+                  <div data-day='23'></div>
+                  <div data-day='24'></div>
+                  <div data-day='25'></div>
+                  <div data-day='26'></div>
+                  <div data-day='27'></div>
+                  <div data-day='28'></div>
+                </div>
+              </div>
+
+              <div class='month'>
+                <div class='weeks'>
+                  <div>星期 日</div>
+                  <div>星期 一</div>
+                  <div>星期 二</div>
+                  <div>星期 三</div>
+                  <div>星期 四</div>
+                  <div>星期 五</div>
+                  <div>星期 六</div>
+                </div>
+
+                <div class='days'>
+                  <div data-day='29'></div>
+                  <div data-day='30'></div>
+                  <div data-day='31'></div>
+                  <div data-day='1'></div>
+                  <div data-day='2'></div>
+                  <div data-day='3'></div>
+                  <div data-day='4'></div>
+                </div>
+                <div class='days'>
+                  <div data-day='5'></div>
+                  <div data-day='6'></div>
+                  <div data-day='7'></div>
+                  <div data-day='8'></div>
+                  <div data-day='9'></div>
+                  <div data-day='10'></div>
+                  <div data-day='11'></div>
+                </div>
+                <div class='days'>
+                  <div data-day='12'></div>
+                  <div data-day='13'></div>
+                  <div data-day='14'></div>
+                  <div data-day='15'></div>
+                  <div data-day='16'></div>
+                  <div data-day='17'></div>
+                  <div data-day='18'></div>
+                </div>
+                <div class='days'>
+                  <div data-day='19'></div>
+                  <div data-day='20'></div>
+                  <div data-day='21'></div>
+                  <div data-day='22'></div>
+                  <div data-day='23'></div>
+                  <div data-day='24'></div>
+                  <div data-day='25'></div>
+                </div>
+              </div> -->
+
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <div id='menu'>
+      <header>
+        <span class='icon-amused-face-closed-eyes'></span>
+        <span>後台 Demo</span>
+      </header>
+
+      <div class='group'>
+        <span class='icon-home'>後台</span>
+        <div>
+          <a class='icon-home' href='index.html'>首頁</a>
+        </div>
+      </div>
+      <div class='group'>
+        <span class='icon-home'>各項 UI</span>
+        <div>
+          <a class='icon-home' href='alert.html'>提示</a>
+          <a class='icon-home' href='list.html'>列表</a>
+          <a class='icon-home' href='form.html'>表單</a>
+          <a class='icon-home show' href='calendar.html'>日曆</a>
+        </div>
+      </div>
+
+      <footer>© 2016 - 2017 WWW.IOA.TW</footer>
+    </div><label class='icon-cross' for='menu_ckb'></label>
+
+    <div id='user'>
+      <div>
+        <span>Hi, <b>吳政賢</b> 您好。</span>
+        <span>目前登入次數：<b>1,231</b>次</span>
+        <span>上次登入：1 個月前</span>
+        <a href='' class='icon-notifications_active' data-count='10,000'>您有未讀訊息</a>
+        <a href='login.html' class='icon-power'>登出</a>
+      </div>
+    </div><label for='user_ckb'></label>
+
+  </body>
+</html>
