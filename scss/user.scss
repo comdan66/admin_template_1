@@ -229,12 +229,14 @@
 
       background-color: rgba(0, 0, 0, 0.3);
       @include clearfix();
-      
+      > b {
+        color: rgba(255, 255, 255, 1.00);
+      }
       > * {
         display: inline-block;
         float: left;
         // border: 1px solid rgba(255, 0, 0, .3);
-        color: rgba(200, 200, 200, 1.00);
+        color: rgba(222, 222, 222, 1.00);
         font-size: 13px;
         + * {
           margin-left: 8px;
@@ -487,7 +489,7 @@
       }
     }
   }
-  
+
   @include range-width(0, 430px) {
     @include mini-main-user1;
     @include mini-main-user2;
