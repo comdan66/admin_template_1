@@ -230,14 +230,16 @@ table.table-list {
     @include mini-table-list;
   };
 
-  ~ span {
+  + span {
     display: inline-block;
     width: 100%;
     font-size: 13px;
-    height: 23px;
-    line-height: 23px;
-    margin-top: 8px;
+    // height: 23px;
+    // line-height: 23px;
+    margin-top: 4px;
+    padding-top: 12px;
     color: rgba(135, 135, 135, 1.00);
+    border-top: 1px dashed rgba(0, 0, 0, .2);
   }
 }
 

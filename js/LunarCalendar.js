@@ -467,7 +467,7 @@
     }else if(lunarLeapMonth>0 && lunarDate[1]>lunarLeapMonth){
       lunarFtv = lunarFestival[formateDayD4(lunarDate[1]-1,lunarDate[2])] ? lunarFestival[formateDayD4(lunarDate[1]-1,lunarDate[2])] : [];
     }else{
-      lunarFtv = lunarFestival[formateDayD4(lunarDate[1],lunarDate[2])] ? lunarFestival[formateDayD4(lunarDate[1],lunarDate[2])] : [];
+      // lunarFtv = lunarFestival[formateDayD4(lunarDate[1],lunarDate[2])] ? lunarFestival[formateDayD4(lunarDate[1],lunarDate[2])] : [];
     }
 
     var res = {
@@ -490,7 +490,7 @@
     };
 
     return res;
-  };
+  }
   
   /**
    * 獲取指定公曆月份的農曆數據
@@ -511,7 +511,7 @@
       extend(calendarData.monthData[i],lunarData);
     }
     return calendarData;
-  };
+  }
   
   /**
    * 公曆某月日曆
@@ -562,7 +562,13 @@
     lunarToSolar : lunarToSolar,
     calendar : calendar,
     solarCalendar : solarCalendar,
-    getSolarMonthDays : getSolarMonthDays
+    getSolarMonthDays : getSolarMonthDays,
+    setSolarFestival : function (d) {
+      extend(solarFestival, d);
+    },
+    setLunarFestival : function (d) {
+      extend(lunarFestival, d);
+    },
   };
   
   if (typeof define === 'function'){

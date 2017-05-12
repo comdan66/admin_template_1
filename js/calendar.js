@@ -104,6 +104,10 @@ $(function () {
                .append (initMonth (y, m))
                .append (initMonth (next));
   }
+
+  window.LunarCalendar.setSolarFestival ({'d0907': [['泰瑞生日'], false]});
+  window.LunarCalendar.setLunarFestival ({'d0812': [['泰瑞生日'], false]});
+
   $('.calendar').each (function () {
     var $that = $(this),
         time = new Date ();
@@ -143,5 +147,4 @@ $(function () {
                 .attr ('data-a', animals (o.y));
          });
   });
-
 });
